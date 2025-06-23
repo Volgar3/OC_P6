@@ -1,0 +1,19 @@
+
+.details-button {
+  position: absolute;
+  top: 73%;     /* modifie cette valeur pour déplacer verticalement */
+  left: 0%;    /* modifie cette valeur pour déplacer horizontalement */
+  background-color: #5f5253c6;
+  color: white;
+  padding: 10px 107px;
+  border-radius: 0px; /* A tritre informatif*/
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button:hover {
+  background-color: #ab3b3b;
+}
