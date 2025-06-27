@@ -26,7 +26,7 @@
                     Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution
                     for his ruined rug and enlists his bowling buddies to help get it.
                 </p>
-                <a href="#" class="btn btn-danger rounded-pill fw-bold">Détails</a>
+                <a href="#" class="btn btn-danger rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#modal">Détails</a>
             </div>
         </section>
         <!-- apres le carré -->
@@ -42,9 +42,9 @@
                         </div>
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <img src="static/img/mieux_noté/1b3cf4dc9113cf2174e4944d2eb40ac0cdea81ac.png"
-                                class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
+                                class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film 1"
                                 style="object-position: center center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button" data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -56,9 +56,9 @@
                         </div>
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <img src="static/img/mieux_noté/2d1973c0810c926a68c698b1916fcb64c1584f63.jpg"
-                                class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
+                                class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film 2"
                                 style="object-position: top center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button"  data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -72,7 +72,7 @@
                             <img src="static/img/mieux_noté/2fc62fbf50172d1ad117ec53cf639985a97b7b74.png"
                                 class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
                                 style="object-position: center center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button" data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
                             <img src="static/img/mieux_noté/6f1112ebc00cfa51d076878ab6c06d244e7515bc.png"
                                 class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
                                 style="object-position: bottom center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button"  data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@
                             <img src="static/img/mieux_noté/228e820742ef1e2b39cd759c239153d3ec9e3937.png"
                                 class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
                                 style="object-position: top center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button"  data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -114,7 +114,7 @@
                             <img src="static/img/mieux_noté/d02e1c6f67d7afc7ced21f7a3a1c0e8e89c39a83.png"
                                 class="w-100 h-100 object-fit-cover rounded-bottom" alt="Nom du film"
                                 style="object-position: top center;">
-                            <a href="#" class="details-button">informations</a>
+                            <a href="#" class="details-button"  data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -170,14 +170,24 @@
                 </div>
             </div>
         </section>
-
-
-        <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Toast container -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
-                    <img src="static/img/just_stream_it.png" class="rounded me-2">
-                    <strong class="me-auto">JustStreamIt</strong>
+                    <img src="static/img/just_stream_it.png" class="rounded me-2" height="20px" width="20px">
+                    <strong class="me-auto">JustStreamIt monitor</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
