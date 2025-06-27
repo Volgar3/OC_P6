@@ -1,11 +1,12 @@
 
 .details-button {
   position: absolute;
-  top: 73%;     /* modifie cette valeur pour déplacer verticalement */
-  left: 0%;    /* modifie cette valeur pour déplacer horizontalement */
+  bottom: 20px; /* positionné en bas */
+  left: 0;
+  width: 100%; /* prend toute la largeur de l'image */
   background-color: #5f5253c6;
   color: white;
-  padding: 10px 107px;
+  padding: 10px 0px;
   border-radius: 0px; /* A tritre informatif*/
   text-decoration: none;
   font-size: 16px;
@@ -44,3 +45,51 @@
     display: block;
 }
 
+.choix-multiples {
+  display: flex;
+  flex-direction: column;        
+  align-items: center;           
+  gap: 1.5rem;                   
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.ligne-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;               
+}
+
+.choix-multiples h1 {
+  margin-bottom: 0;
+  padding: 10px 0px;
+  border-radius: 15px;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5rem;
+}
+
+.choix-multiples select {
+  font-family: sans-serif;
+  padding: 10px 0px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border-color: rgba(255, 166, 0, 0.432);
+  background-color: rgba(255, 166, 0, 0.15);
+  border-width: 3px;
+}
+
+.img-from-choices img {
+  width: 600px;
+  height: 600px;
+  max-width: 800px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1 / 1;
+}
