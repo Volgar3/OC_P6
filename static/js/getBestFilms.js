@@ -14,11 +14,13 @@ export function getBestFilms() {
             console.log(data);
             const container = document.getElementById('bestFilms');
 
-            const images = container.querySelectorAll('img');
-            let index = 0;
-            data.results.forEach(item => {
-                images[index].src = item.image_url;
-                index++;
+            const films = container.querySelectorAll('.film');
+            data.results.forEach((item, index) => {
+                const img = films[index].querySelector('img');
+                const title = films[index].querySelector('.title-film');
+
+                img.src = item.image_url;
+                title.innerHTML = `<h6>${item.title}</h6>`;
             });
         })
         .catch(error => {
