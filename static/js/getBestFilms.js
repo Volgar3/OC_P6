@@ -18,9 +18,11 @@ export function getBestFilms() {
             data.results.forEach((item, index) => {
                 const img = films[index].querySelector('img');
                 const title = films[index].querySelector('.title-film');
+                const button = films[index].querySelector('a');
 
                 img.src = item.image_url;
                 title.innerHTML = `<h6>${item.title}</h6>`;
+                button.id = `film-${item.id}`;
             });
         })
         .catch(error => {
