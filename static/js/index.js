@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         img.addEventListener('click', function () {
             const parent = this.parentElement;
             const image = parent.querySelector('img');
-            const altText = image.getAttribute('alt');
             const id = this.getAttribute('id').split('-')[1]
             console.log(id)
 
             const modalBody = document.querySelector('.modal-body'); // Get the first matching element
             if (modalBody) {
-                modalBody.textContent = altText;
+                modalBody.textContent = `Titre : ${image.getAttribute('alt')} (ID : ${id})`;
+
+                
             }
         });
     });

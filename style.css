@@ -1,22 +1,22 @@
-.title-film h6{
-color: white;              /* text-white */
-  padding-left: 0.5rem;        /* px-2 */
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;        /* py-1 */
-  padding-bottom: 0.25rem;
-  font-weight: bold;           /* fw-bold */
-  font-size: 0.875rem;         /* small = 14px si base 16px */
-  text-align: center;          /* text-center */
-  border-top-left-radius: 0.375rem;  /* rounded-top */
+.film-title {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
-  background-color: rgba(187, 91, 91, 0.75); 
-  width: 75%;
+  background-color: rgba(187, 91, 91, 0.75);
 }
-
-
-
-
-
+.film-img{
+   width: 100%;
+  height: auto;
+  object-fit: fill;
+}
 .details-button {
   position: absolute;
   bottom: 20px; /* positionné en bas */
