@@ -17,11 +17,12 @@ export function getBestFilms() {
             const films = container.querySelectorAll('.film');
             data.results.forEach((item, index) => {
                 const img = films[index].querySelector('img');
-                const title = films[index].querySelector('.title-film');
+                const titleElement = films[index].querySelector('.film-title');
                 const button = films[index].querySelector('a');
 
                 img.src = item.image_url;
-                title.innerHTML = `<h6>${item.title}</h6>`;
+                img.setAttribute('alt', item.title);
+                titleElement.textContent = item.title;
                 button.id = `film-${item.id}`;
             });
         })

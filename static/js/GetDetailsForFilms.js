@@ -1,37 +1,13 @@
-import { displayToast } from './displayToast.js';
+import { fetchBestFilms } from './getBestFilms.js';
 
-export let bestFilmsDetails = [];
+fetchBestFilms()
+    .then(films => {
+        const filmIds = films.map(film => film.id); // ← tu récupères juste les IDs
+        const filmTitles = films.map(film => film.title);
+        console.log('Les 6 IDs :', filmIds);
+        console.log('Les 6 titres :', filmTitles);
 
-export function getDetailsForBestFilms() {
-    fetch('http://localhost:8000/api/v1/titles/?page_size=6&sort_by=-avg_vote')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur lors de la récupération des meilleurs films');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const filmUrls = data.results.map(film => film.url);
-
-            // Pour chaque URL, faire un fetch
-            const detailFetches = filmUrls.map(url =>
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Erreur de récupération pour ${url}`);
-                        }
-                        return response.json();
-                    })
-            );
-
-            // Promise.all attend que toutes les requêtes soient terminées
-            return Promise.all(detailFetches);
-        })
-        .then(filmDetails => {
-            console.log("Détails complets des films :", filmDetails);
-        })
-        .catch(error => {
-            console.error(error);
-            displayToast(error.message);
-        });
-}
+        // Reconstitution des URL
+        const urls = filmIds.map(id => `http://localhost:8000/api/v1/${title}/${id}`);
+        console.log('Les six URL :', urls);
+    })
