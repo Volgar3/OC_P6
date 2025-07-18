@@ -1,6 +1,5 @@
 import { getBestFilms } from "./getBestFilms.js";
 
-
 document.addEventListener("DOMContentLoaded", function () {
     getBestFilms();
 
@@ -11,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const id = this.getAttribute('id').split('-')[1]
             console.log(id)
 
+            const modalTitle = document.querySelector('.modal-title');
+            if (modalTitle) {
+                modalTitle.textContent = `Titre : ${image.getAttribute('alt')}`;
+            }
+
             const modalBody = document.querySelector('.modal-body'); // Get the first matching element
             if (modalBody) {
-                modalBody.textContent = `Titre : ${image.getAttribute('alt')} (ID : ${id})`;
+                modalBody.textContent = `(ID : ${id})`;
 
                 
             }

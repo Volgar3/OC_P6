@@ -41,8 +41,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -51,8 +51,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -61,8 +61,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -71,8 +71,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -81,8 +81,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
 
@@ -91,8 +91,8 @@
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
                             <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0" data-bs-toggle="modal"
-                                data-bs-target="#modal">informations</a>
+                            <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
+                                data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
                     </div>
                 </div>
@@ -148,16 +148,48 @@
             </div>
         </section>
 
-
-        <!-- Modal -->
+        <!-- MODAL -->
         <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-body">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Titre du film</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
+
+                    <!-- Corps -->
+                    <div class="modal-body d-flex flex-column flex-md-row gap-3">
+                        <!-- Image -->
+                        <div class="modal-img text-center">
+                            <img src="https://via.placeholder.com/300x400" class="img-fluid rounded"
+                                alt="Image du film">
+                        </div>
+                        <!-- Description -->
+                        <div class="modal-description">
+                            <h6>Description</h6>
+                            <p>
+                                Ceci est une description fictive d’un film passionnant avec des rebondissements
+                                inattendus.
+                            </p>
+                            <ul>
+                                <li><strong>Genre :</strong> Thriller</li>
+                                <li><strong>Durée :</strong> 2h04</li>
+                                <li><strong>Réalisateur :</strong> Alice Martin</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+
                 </div>
             </div>
         </div>
+
 
         <!-- Toast container -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
