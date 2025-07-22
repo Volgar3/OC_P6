@@ -11,7 +11,6 @@ export function getBestFilms() {
             return response.json(); // or response.text(), depending on what your server returns
         })
         .then(data => {
-            console.log(data);
             const container = document.getElementById('bestFilms');
 
             const films = container.querySelectorAll('.film');

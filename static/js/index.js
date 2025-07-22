@@ -5,22 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
         img.addEventListener('click', function () {
-            const parent = this.parentElement;
-            const image = parent.querySelector('img');
             const id = this.getAttribute('id').split('-')[1]
-            console.log(id)
-
             const modalTitle = document.querySelector('.modal-title');
-            if (modalTitle) {
-                modalTitle.textContent = `Titre : ${image.getAttribute('alt')}`;
-            }
+            const modalImage = document.querySelector('#modal-image');
+            const modalDescription = document.querySelector('.modal-description > p');
+            const modalGenre = document.querySelector('#modal-genre');
 
-            const modalBody = document.querySelector('.modal-body'); // Get the first matching element
-            if (modalBody) {
-                modalBody.textContent = `(ID : ${id})`;
-
-                
-            }
+            fetch(`http://localhost:8000/api/v1/titles/${id}`).then(
+                response => {
+                    return response.json();
+                }
+            ).then(
+                data => {
+                    console.log(data);
+                    modalTitle.textContent = data.title;
+                    modalImage.src = data.image_url;
+                    modalDescription.textContent = data.long_description;
+                    modalGenre.innerHTML = `<strong>Genres :</strong> ${data.genres.join(", ")}`;
+                }
+            );
         });
     });
 });
