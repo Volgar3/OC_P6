@@ -1,4 +1,5 @@
 import { getBestFilms } from "./getBestFilms.js";
+import { getCategoryFilms } from './getCategoryFilms.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     getBestFilms();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const modalIMBD = document.querySelector('#modal-IMDB');
             const modalActors = document.querySelector('#modal-actors');
 
+
             fetch(`http://localhost:8000/api/v1/titles/${id}`).then(
                 response => {
                     return response.json();
@@ -35,10 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     modalIMBD.innerHTML = `<strong>Score IMDB :</strong> ${data.avg_vote} /10`;
                     modalActors.innerHTML = `<u>Acteurs et actrices :</u>  ${data.actors}`;
                     modalReleaseDate.innerHTML =`<u>Sortie en :</u>  ${ReleaseYear}`; // Trouver une solution
+                    
+                    // Mystery and Drama
 
+                    modalImageForGenre
 
                 }
             );
         });
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selector = document.getElementById('categorySelector');
+    selector.addEventListener('change', () => {
+        getCategoryFilms();
+    });
+});
+

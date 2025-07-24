@@ -37,14 +37,14 @@
   background-color: #ab3b3b;
 }
 
-.image-category {
+.img-film-category {
   text-align: center;
     width: 800px;
     margin: 1rem auto 1rem auto;
 
 }
 
-.image-category h1{ 
+.img-film-category h1{ 
   margin-bottom: 1rem;
   background-color: rgba(215, 212, 212, 0.676);
   width: 100%;
@@ -54,7 +54,7 @@
 
 }
 
-.image-category img {
+.img-film-category img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;

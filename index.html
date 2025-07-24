@@ -96,54 +96,50 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Films spécifique à leur propre catégorie-->
         </section>
-        <!-- Films spécifique à leur propre catégorie-->
         <br>
-        <div class="image-category">
-            <h1>Mystery</h1>
-            <img src="static/img/mieux_noté/228e820742ef1e2b39cd759c239153d3ec9e3937.png" alt="Alien film">
-        </div>
-
-        <div class="image-category">
-            <h1>Drama</h1>
-            <img src="static/img/mieux_noté/d02e1c6f67d7afc7ced21f7a3a1c0e8e89c39a83.png" alt="Scarface film">
-        </div>
-
-        <!-- La ligne en dessous permet d'importer bootstrap pour javaScript, doit se situer dans le body pour que tout le HTML soit chargé quand le script s'exécute-->
-        <section>
-            <div class="choix-multiples">
-                <div class="ligne-select">
-                    <h1>Autres :</h1>
-                    <select>
-                        <option> Film d'action </option>
-                        <option> Comédies </option>
-                        <option> Famille </option>
-                        <option> Film d'horreur </option>
-                        <option> Film de fantasy </option>
-                        <option> Science-fiction </option>
-                        <option> Westerns </option>
-                    </select>
-                </div>
-                <div class="img-from-choices">
-                    <img src="static/img/mieux_noté/2d1973c0810c926a68c698b1916fcb64c1584f63.jpg" alt="Exemple">
-                </div>
+        <section id="categoryFilms">
+            <div class="img-film-category">
+                <h1>Mystery</h1>
+                <img src="static/img/mieux_noté/228e820742ef1e2b39cd759c239153d3ec9e3937.png" alt="Alien film"
+                    id="catImg" data-bs-toggle="Categorymodal" data-bs-target="#modal" data-index="0">
             </div>
-            <div class="choix-multiples">
-                <div class="ligne-select">
-                    <h1>Autres :</h1>
-                    <select>
-                        <option> Film d'action </option>
-                        <option> Comédies </option>
-                        <option> Famille </option>
-                        <option> Film d'horreur </option>
-                        <option> Film de fantasy </option>
-                        <option> Science-fiction </option>
-                        <option> Westerns </option>
-                    </select>
-                </div>
-                <div class="img-from-choices">
-                    <img src="static/img/mieux_noté/2d1973c0810c926a68c698b1916fcb64c1584f63.jpg" alt="Exemple">
-                </div>
+
+            <div class="img-film-category">
+                <h1>Drama</h1>
+                <img src="static/img/mieux_noté/d02e1c6f67d7afc7ced21f7a3a1c0e8e89c39a83.png" alt="Scarface film"
+                    id="catImg" data-bs-toggle="Categorymodal" data-bs-target="#modal">
+            </div>
+
+
+            <select class= "choix-multiples" id="categorySelector">
+                <option value="Action">Film d'action</option>
+                <option value="Comedy">Comédies</option>
+                <option value="Family">Famille</option>
+                <option value="Horror">Film d'horreur</option>
+                <option value="Fantasy">Film de fantasy</option>
+                <option value="Sci-Fi">Science-fiction</option>
+                <option value="Western">Westerns</option>
+            </select>
+
+            <div class="img-from-choices" id="dynamicImg"> <!--  Définir un id -->
+                <img src="static/img/mieux_noté/2d1973c0810c926a68c698b1916fcb64c1584f63.jpg" alt="Exemple">
+            </div>
+
+            <select class= "choix-multiples" id="categorySelector"> <!-- Changer l'id/ Adapter correctement -->
+                <option value="Action">Film d'action</option>
+                <option value="Comedy">Comédies</option>
+                <option value="Family">Famille</option>
+                <option value="Horror">Film d'horreur</option>
+                <option value="Fantasy">Film de fantasy</option>
+                <option value="Sci-Fi">Science-fiction</option>
+                <option value="Western">Westerns</option>
+            </select>
+
+            <div class="img-from-choices" id="dynamicImg"> <!--  Définir un id -->
+                <img src="static/img/mieux_noté/2d1973c0810c926a68c698b1916fcb64c1584f63.jpg" alt="Exemple">
             </div>
         </section>
 
@@ -162,8 +158,8 @@
                     <div class="modal-body d-flex flex-column flex-md-row gap-3">
                         <!-- Image -->
                         <div class="modal-img text-center">
-                            <img src="https://via.placeholder.com/300x400" class="rounded"
-                                alt="Image du film" id="modal-image" width="300px 250px">
+                            <img src="https://via.placeholder.com/300x400" class="rounded" alt="Image du film"
+                                id="modal-image" width="300px 250px">
                         </div>
                         <!-- Description -->
                         <div class="modal-description">
@@ -175,12 +171,12 @@
                             </p>
                             <ul>
                                 <li id="modal-genre"><strong>Genre :</strong> Thriller</li>
-                                <li id ="modal-duration"><strong>Durée :</strong> 2h04</li>
+                                <li id="modal-duration"><strong>Durée :</strong> 2h04</li>
                                 <li id="modal-director"><strong>Réalisateur :</strong> Alice Martin</li>
                                 <li id="modal-boxOffice"> <strong>Recettes au box-office :</strong> 10 Millions</li>
-                                <li id ="modal-IMDB"> <strong>Score IMDB :</strong> 9.8 </li>
+                                <li id="modal-IMDB"> <strong>Score IMDB :</strong> 9.8 </li>
                             </ul>
-                            <h6 id ="modal-actors"> <u>Acteurs et actrices :</u></h6>
+                            <h6 id="modal-actors"> <u>Acteurs et actrices :</u></h6>
                         </div>
                     </div>
 
