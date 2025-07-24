@@ -2,14 +2,14 @@ import { getBestFilms } from "./getBestFilms.js";
 import { getCategoryFilms } from './getCategoryFilms.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    getBestFilms();
+    getBestFilms(null, 'bestFilms');
+    getBestFilms('mystery', 'mysteryFilms');
 
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
         img.addEventListener('click', function () {
-            const id = this.getAttribute('id').split('-')[1]
+            const id = this.getAttribute('id').split('-')[1];
             const modalTitle = document.querySelector('.modal-title');
             const modalReleaseDate = document.querySelector('#modal-release');
-            //const ReleaseYear = data.date_published.split('-')[0] Trouver une solution
             const modalImage = document.querySelector('#modal-image');
             const modalDescription = document.querySelector('.modal-description > p');
             const modalGenre = document.querySelector('#modal-genre');
@@ -26,31 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             ).then(
                 data => {
-                    console.log(data);
+                    const releaseYear = data.date_published.split('-')[0];
+
                     modalTitle.textContent = data.title;
                     modalImage.src = data.image_url;
                     modalDescription.textContent = data.long_description;
                     modalGenre.innerHTML = `<strong>Genres :</strong> ${data.genres.join(", ")}`;
                     modalDuration.innerHTML = `<strong>Durée :</strong> ${data.duration} minutes`;
                     modalDirector.innerHTML = `<strong>Réalisateur :</strong> ${data.directors}`;
-                    // A trouver modalBoxOffice.innerHTML = `<strong>Recettes au box-office :</strong>${data.}`;
+                    modalBoxOffice.innerHTML = `<strong>Recettes au box-office : </strong>${data.worldwide_gross_income ?? "Unknown"}`;
                     modalIMBD.innerHTML = `<strong>Score IMDB :</strong> ${data.avg_vote} /10`;
                     modalActors.innerHTML = `<u>Acteurs et actrices :</u>  ${data.actors}`;
-                    modalReleaseDate.innerHTML =`<u>Sortie en :</u>  ${ReleaseYear}`; // Trouver une solution
-                    
-                    // Mystery and Drama
-
-                    modalImageForGenre
-
+                    modalReleaseDate.innerHTML =`<u>Sortie en :</u>  ${releaseYear}`;
                 }
             );
         });
     });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     const selector = document.getElementById('categorySelector');
     selector.addEventListener('change', () => {
         getCategoryFilms();
