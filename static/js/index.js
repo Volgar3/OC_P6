@@ -4,6 +4,7 @@ import { getCategoryFilms } from './getCategoryFilms.js';
 document.addEventListener("DOMContentLoaded", function () {
     getBestFilms(null, 'bestFilms');
     getBestFilms('mystery', 'mysteryFilms');
+    getBestFilms('drama', 'dramaFilms');
 
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
         img.addEventListener('click', function () {
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const modalGenre = document.querySelector('#modal-genre');
             const modalDuration = document.querySelector('#modal-duration');
             const modalDirector = document.querySelector('#modal-director');
-            const modalBoxOffice = document.querySelector('#modal-boxOffice'); // Trouver ce qu'il y a apres "data."
+            const modalBoxOffice = document.querySelector('#modal-boxOffice');
             const modalIMBD = document.querySelector('#modal-IMDB');
             const modalActors = document.querySelector('#modal-actors');
 

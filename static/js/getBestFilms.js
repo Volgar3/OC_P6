@@ -6,7 +6,7 @@ export function getBestFilms(category, elementId) {
         let url = null;
         
         if (category) {
-            url = `http://localhost:8000/api/v1/titles/?genre=${category}page_size=6&sort_by=-avg_vote`
+            url = `http://localhost:8000/api/v1/titles/?genre=${category}&page_size=6&sort_by=-avg_vote`
         } else {
             url = 'http://localhost:8000/api/v1/titles/?page_size=6&sort_by=-avg_vote';
         }

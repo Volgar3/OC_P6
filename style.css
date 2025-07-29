@@ -1,3 +1,4 @@
+/* Les titres des films */
 .film-title {
   top: 0;
   left: 0;
@@ -12,11 +13,13 @@
   border-top-right-radius: 0.375rem;
   background-color: rgba(187, 91, 91, 0.75);
 }
+/* Les images des films */
 .film-img{
    width: 100%;
   height: auto;
   object-fit: fill;
 }
+/* Le bouton détails */
 .details-button {
   position: absolute;
   bottom: 20px; /* positionné en bas */
@@ -32,37 +35,24 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+/* L'effet rouge du bouton quand on passe notre curseur */
 .details-button:hover {
   background-color: #ab3b3b;
 }
 
-.img-film-category {
-  text-align: center;
-    width: 800px;
-    margin: 1rem auto 1rem auto;
+
+.film-category-title h1 {
+  font-size: 24px;
+  color: black;
+  margin: 2rem auto;
+  background-color: rgba(242, 238, 238, 0.765);
+  padding: 0.2rem;
+  font-size: 2rem;
+  border-radius: 2rem;
 
 }
 
-.img-film-category h1{ 
-  margin-bottom: 1rem;
-  background-color: rgba(215, 212, 212, 0.676);
-  width: 100%;
-  padding: 10px 0px;
-  border-radius: 15px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-}
-
-.img-film-category img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 8px;
-    display: block;
-}
-
+/* Placement des boutons à choix multiples */
 .choix-multiples {
   display: flex;
   flex-direction: column;        
@@ -73,41 +63,3 @@
   text-align: center;
 }
 
-.ligne-select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;               
-}
-
-.choix-multiples h1 {
-  margin-bottom: 0;
-  padding: 10px 0px;
-  border-radius: 15px;
-  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 1.5rem;
-}
-
-.choix-multiples select {
-  font-family: sans-serif;
-  padding: 10px 0px;
-  border-radius: 8px;
-  font-size: 1rem;
-  border-color: rgba(255, 166, 0, 0.432);
-  background-color: rgba(255, 166, 0, 0.15);
-  border-width: 3px;
-}
-
-.img-from-choices img {
-  width: 600px;
-  height: 600px;
-  max-width: 800px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 8px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  aspect-ratio: 1 / 1;
-}
