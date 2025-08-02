@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     getBestFilms('mystery', 'mysteryFilms');
     getBestFilms('drama', 'dramaFilms');
 
+    getCategoryFilms('categorySelector', 'categoryFilms');
+    getCategoryFilms('secondCategorySelector', 'secondCategoryFilms');
+
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
         img.addEventListener('click', function () {
             const id = this.getAttribute('id').split('-')[1];
@@ -42,10 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             );
         });
-    });
-    const selector = document.getElementById('categorySelector');
-    selector.addEventListener('change', () => {
-        getCategoryFilms();
     });
 });
 

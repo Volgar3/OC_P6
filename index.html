@@ -40,7 +40,8 @@
                     <div class="col film">
                         <div class="position-relative" style="width: 75%; height: 249px;">
                             <p class="film-title">Nom du film</p>
-                            <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
+                            <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="..."
+                            onerror="this.onerror=null; this.src='imgNotFound.jpg';">
                             <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
                                 data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                         </div>
@@ -319,7 +320,7 @@
         </section>
         <!--  SECOND CHOIX DE CATEGORY-->
 
-        <select class="choix-multiples" id="categorySelector">
+        <select class="choix-multiples" id="secondCategorySelector">
             <option value="Action">Film d'action</option>
             <option value="Comedy">Comédies</option>
             <option value="Family">Famille</option>
@@ -329,7 +330,7 @@
             <option value="Western">Westerns</option>
         </select>
 
-        <section id="categoryFilms">
+        <section id="secondCategoryFilms">
             <div class="container text-center">
                 <div class="row row-cols-3 gy-5">
                     <!-- 1st image -->
