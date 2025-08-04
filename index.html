@@ -35,7 +35,7 @@
         <section id="bestFilms">
             <div class="container text-center">
                 <div class="film-card">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-5">
+                    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gy-5">
                         <!-- 1st image -->
                         <div class="col film">
                             <div class="position-relative" style="width: 75%; height: 249px;">
@@ -77,8 +77,12 @@
                             </div>
                         </div>
 
+                        <button id="see-more-best" class="btn btn-primary d-none d-md-inline d-lg-none">
+                            Voir plus ...
+                        </button>
+
                         <!-- 5th image -->
-                        <div class="col film">
+                        <div class="col d-none d-lg-inline film">
                             <div class="position-relative" style="width: 75%; height: 249px;">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
@@ -88,7 +92,7 @@
                         </div>
 
                         <!-- 6th image -->
-                        <div class="col film">
+                        <div class="col d-none d-lg-inline film">
                             <div class="position-relative" style="width: 75%; height: 249px;">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
@@ -96,6 +100,9 @@
                                     data-bs-toggle="modal" data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+                        <button id="see-less-best" class="btn btn-primary d-none d-md-none d-lg-none">
+                            Voir moins ...
+                        </button>
                     </div>
                 </div>
             </div>

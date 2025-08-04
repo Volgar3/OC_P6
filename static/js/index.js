@@ -9,6 +9,38 @@ document.addEventListener("DOMContentLoaded", function () {
     getCategoryFilms('categorySelector', 'categoryFilms');
     getCategoryFilms('secondCategorySelector', 'secondCategoryFilms');
 
+    const seeMoreBtn = this.documentElement.querySelector('#see-more-best');
+    if (seeMoreBtn) {
+        seeMoreBtn.addEventListener('click', () => {
+
+            let nextDivs = [];
+            let sibling = this.activeElement.nextElementSibling;
+            console.log(this.activeElement.nextElementSibling);
+
+            // Cache le bouton Voir plus
+            this.activeElement.classList.remove('d-md-inline');
+            this.activeElement.classList.add('d-md-none');
+
+// On retire la visibilité des deux images
+            while (sibling && nextDivs.length < 2) {
+                if (sibling.tagName.toLowerCase() === 'div') {
+                    nextDivs.push(sibling);
+                }
+                sibling = sibling.nextElementSibling;
+            }
+
+            nextDivs.forEach((div, index) => {
+                div.classList.remove('d-none');
+            });
+
+
+            // On affiche le bouton "Voir moins"
+            sibling.classList.remove('d-md-none');
+            sibling.classList.add('d-md-inline');
+        });
+    }
+
+
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
         img.addEventListener('click', function () {
             const id = this.getAttribute('id').split('-')[1];
