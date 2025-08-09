@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -35,45 +36,49 @@
         <section id="bestFilms">
             <div class="container text-center">
                 <div class="film-card">
-                    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gy-5">
-                        <!-- 1st image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="..."
-                                    onerror="this.onerror=null; this.src='imgNotFound.jpg';">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                    <div class="film-grid">
+                        <!-- 1fr image -->
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 2nd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 3rd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
+
                         <!-- 4th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
@@ -82,24 +87,27 @@
                         </button>
 
                         <!-- 5th image -->
-                        <div class="col d-none d-lg-inline film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 6th image -->
-                        <div class="col d-none d-lg-inline film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
                         <button id="see-less-best" class="btn btn-primary d-none d-md-none d-lg-none">
                             Voir moins ...
                         </button>
@@ -111,70 +119,82 @@
         <br>
         <section id="mysteryFilms">
             <div class="container text-center">
-                <div class="film-category-title">
-                    <h1>Mystery</h1>
-                </div>
                 <div class="film-card">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5">
-                        <!-- 1st image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                    <div class="film-grid">
+                        <!-- 1fr image -->
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 2nd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 3rd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
 
                         <!-- 4th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
+                        <button id="see-more-best" class="btn btn-primary d-none d-md-inline d-lg-none">
+                            Voir plus ...
+                        </button>
+
                         <!-- 5th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 6th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
+                        <button id="see-less-best" class="btn btn-primary d-none d-md-none d-lg-none">
+                            Voir moins ...
+                        </button>
                     </div>
                 </div>
             </div>
@@ -183,70 +203,82 @@
         <!-- DramaFilms -->
         <section id="dramaFilms" class="caseFilms">
             <div class="container text-center">
-                <div class="film-category-title">
-                    <h1>Drama</h1>
-                </div>
                 <div class="film-card">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5">
-                        <!-- 1st image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                    <div class="film-grid">
+                        <!-- 1fr image -->
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 2nd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 3rd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
 
                         <!-- 4th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
+                        <button id="see-more-best" class="btn btn-primary d-none d-md-inline d-lg-none">
+                            Voir plus ...
+                        </button>
+
                         <!-- 5th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 6th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
+                        <button id="see-less-best" class="btn btn-primary d-none d-md-none d-lg-none">
+                            Voir moins ...
+                        </button>
                     </div>
                 </div>
             </div>
@@ -267,72 +299,84 @@
         <section id="categoryFilms">
             <div class="container text-center">
                 <div class="film-card">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5">
-
-                        <!-- 1st image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                    <div class="film-grid">
+                        <!-- 1fr image -->
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 2nd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 3rd image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
 
                         <!-- 4th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
+                        <button id="see-more-best" class="btn btn-primary d-none d-md-inline d-lg-none">
+                            Voir plus ...
+                        </button>
+
                         <!-- 5th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
 
                         <!-- 6th image -->
-                        <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
-                                <p class="film-title">Nom du film</p>
-                                <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
-                                <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
-                                    data-bs-toggle="modal" data-bs-target="#modal">informations</a>
+                        <div class="film-container">
+                            <p class="film-title">Nom du film</p>
+                            <div class="position-relative">
+                                <img src="..." class="film-img w-100 h-100 rounded-bottom"
+                                    alt="..." onerror="this.onerror=null; this.src='{% static 'img/imgNotFound.jpg' %}'">
+                                <a href="#" class="details-button" data-index="0" data-bs-toggle="modal"
+                                    data-bs-target="#modal">informations</a>
                             </div>
                         </div>
+
+                        <button id="see-less-best" class="btn btn-primary d-none d-md-none d-lg-none">
+                            Voir moins ...
+                        </button>
                     </div>
                 </div>
             </div>
-
-
         </section>
         <!--  SECOND CHOIX DE CATEGORY-->
 
@@ -352,7 +396,7 @@
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-5">
                         <!-- 1st image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -362,7 +406,7 @@
 
                         <!-- 2nd image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -372,7 +416,7 @@
 
                         <!-- 3rd image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -382,7 +426,7 @@
 
                         <!-- 4th image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -392,7 +436,7 @@
 
                         <!-- 5th image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -402,7 +446,7 @@
 
                         <!-- 6th image -->
                         <div class="col film">
-                            <div class="position-relative" style="width: 75%; height: 249px;">
+                            <div class="position-relative film-container">
                                 <p class="film-title">Nom du film</p>
                                 <img src="..." class="film-img w-100 h-100 rounded-bottom" alt="...">
                                 <a href="HTML/static/img/imgNotFound.jpg" class="details-button" data-index="0"
@@ -412,7 +456,7 @@
                     </div>
                 </div>
             </div>
-
+        </section>
             <!-- MODAL -->
             <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">

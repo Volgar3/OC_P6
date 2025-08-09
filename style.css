@@ -17,8 +17,36 @@
 .film-img {
   object-fit: fill;
   width: 100%;
-  height: auto;
 }
+/* Mettre l'ensemble des parametres pour chaque baslie pour chaque carte de film */
+.film-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile par défaut */
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    
+  }
+
+  /* Tablette - 2 colonnes */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .film-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop - 3 colonnes */
+  @media (min-width: 992px) {
+    .film-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .film-container {
+    width: 80%;
+    max-width: 249px;
+    margin: 1rem;
+  }
 
 /* Bouton - visuel */
 .details-button {
@@ -26,10 +54,10 @@
   color: white;
   border-radius: 0px;
   text-decoration: none;
-  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  z-index: 10;
+ 
 }
 
 /* HOVER DU BOUTON */
@@ -89,10 +117,8 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* ombre douce */
   overflow: hidden; /* évite que le contenu dépasse les coins arrondis */
   position: relative; /* pour positionner le bouton détails */
-  padding-left: 4.5rem;
-  padding-bottom: 4rem; /* espace en bas pour le bouton */
-  padding-top: 2rem;
   transition: transform 0.2s ease;
+  padding-bottom: 2rem;
 }
 
 
@@ -105,19 +131,16 @@
   right: 0;
 }
 
-.details-button {
+.details-button{ 
+  margin-bottom: 20%;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
   position: absolute;
-  bottom: 20px;
-  left: 0;
   width: 100%;
-  padding: 10px 0px;
+  height: 10%;
+  bottom: 0;
+  left: 0; 
 }
-
-.film-category-title {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
 /* Placement du sélecteur */
 .choix-multiples {
   display: flex;
@@ -133,16 +156,3 @@
   padding: 12px 40px 12px 16px;
 }
 
-/* Mobile */
-@media (max-width: 575px) {
-  .film-card {
-    width: 100%;
-  }
-}
-
-/* Tablette */
-@media (min-width: 576px) and (max-width: 991px) {
-  .film-card {
-    width: 90%;
-  }
-}
