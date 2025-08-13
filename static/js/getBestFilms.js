@@ -20,7 +20,7 @@ export function getBestFilms(category, elementId) {
         .then(data => {
             const container = document.getElementById(elementId);
 
-            const films = container.querySelectorAll('.film');
+            const films = container.querySelectorAll('.film-container');
             data.results.forEach((item, index) => {
                 const img = films[index].querySelector('img');
                 const titleElement = films[index].querySelector('.film-title');

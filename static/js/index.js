@@ -1,5 +1,6 @@
 import { getBestFilms } from "./getBestFilms.js";
 import { getCategoryFilms } from './getCategoryFilms.js';
+import { initBtnController } from './btnController.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     getBestFilms(null, 'bestFilms');
@@ -9,36 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     getCategoryFilms('categorySelector', 'categoryFilms');
     getCategoryFilms('secondCategorySelector', 'secondCategoryFilms');
 
-    const seeMoreBtn = this.documentElement.querySelector('#see-more-best');
-    if (seeMoreBtn) {
-        seeMoreBtn.addEventListener('click', () => {
-
-            let nextDivs = [];
-            let sibling = this.activeElement.nextElementSibling;
-            console.log(this.activeElement.nextElementSibling);
-
-            // Cache le bouton Voir plus
-            this.activeElement.classList.remove('d-md-inline');
-            this.activeElement.classList.add('d-md-none');
-
-// On retire la visibilité des deux images
-            while (sibling && nextDivs.length < 2) {
-                if (sibling.tagName.toLowerCase() === 'div') {
-                    nextDivs.push(sibling);
-                }
-                sibling = sibling.nextElementSibling;
-            }
-
-            nextDivs.forEach((div, index) => {
-                div.classList.remove('d-none');
-            });
-
-
-            // On affiche le bouton "Voir moins"
-            sibling.classList.remove('d-md-none');
-            sibling.classList.add('d-md-inline');
-        });
-    }
+// Activation du bouton Voir plus / Voir moins
+    initBtnController({ sectionSelector: '#mysteryFilms', filmSelector: '.film-container' });
+    initBtnController({ sectionSelector: '#dramaFilms', filmSelector: '.film-container' });
+    initBtnController({ sectionSelector: '#bestFilms', filmSelector: '.film-container' });
 
 
     document.querySelectorAll('a[data-bs-toggle="modal"]').forEach(img => {
