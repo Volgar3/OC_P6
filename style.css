@@ -6,7 +6,7 @@
   color: white;
   padding: 0.25rem 1rem;
   font-weight: bold;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   text-align: center;
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
@@ -18,35 +18,37 @@
   object-fit: fill;
   width: 100%;
 }
+
 /* Mettre l'ensemble des parametres pour chaque baslie pour chaque carte de film */
 .film-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile par défaut */
-    justify-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-    
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Mobile par défaut */
+  justify-items: center;
+  gap: 2rem;
+  padding: 1rem;
 
-  /* Tablette - 2 colonnes */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .film-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+}
 
-  /* Desktop - 3 colonnes */
-  @media (min-width: 992px) {
-    .film-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+/* Tablette - 2 colonnes */
+@media (min-width: 768px) and (max-width: 991px) {
+  .film-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .film-container {
-    width: 80%;
-    max-width: 249px;
-    margin: 1rem;
+/* Desktop - 3 colonnes */
+@media (min-width: 992px) {
+  .film-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.film-container {
+  width: 80%;
+  max-width: 249px;
+  margin: 1rem;
+}
 
 /* Bouton - visuel */
 .details-button {
@@ -57,7 +59,7 @@
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
- 
+
 }
 
 /* HOVER DU BOUTON */
@@ -113,10 +115,14 @@
 
 .film-card {
   background-color: white;
-  border-radius: 1rem; /* coins arrondis */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* ombre douce */
-  overflow: hidden; /* évite que le contenu dépasse les coins arrondis */
-  position: relative; /* pour positionner le bouton détails */
+  border-radius: 1rem;
+  /* coins arrondis */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* ombre douce */
+  overflow: hidden;
+  /* évite que le contenu dépasse les coins arrondis */
+  position: relative;
+  /* pour positionner le bouton détails */
   transition: transform 0.2s ease;
   padding-bottom: 2rem;
 }
@@ -131,7 +137,7 @@
   right: 0;
 }
 
-.details-button{ 
+.details-button {
   margin-bottom: 20%;
   padding: 0.5rem;
   transition: background-color 0.3s;
@@ -139,8 +145,9 @@
   width: 100%;
   height: 10%;
   bottom: 0;
-  left: 0; 
+  left: 0;
 }
+
 /* Placement du sélecteur */
 .choix-multiples {
   display: flex;
@@ -156,3 +163,27 @@
   padding: 12px 40px 12px 16px;
 }
 
+/* Bouton toogle-btn */
+
+.toggle-btn {
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 50rem;
+  padding: 1.5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: none;
+  background-color: #5f5253c6;
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 20px rgba(134, 49, 49, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.toggle-btn:hover {
+  outline: none;
+  background-color: rgb(220, 53, 69);
+
+}
