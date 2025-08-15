@@ -54,12 +54,10 @@
 .details-button {
   background-color: #5f5253c6;
   color: white;
-  border-radius: 0px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
-
 }
 
 /* HOVER DU BOUTON */
@@ -146,6 +144,7 @@
   height: 10%;
   bottom: 0;
   left: 0;
+  padding-bottom: 2rem;
 }
 
 /* Placement du sélecteur */

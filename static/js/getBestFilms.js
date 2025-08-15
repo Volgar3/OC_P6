@@ -3,14 +3,14 @@
 import { displayToast } from './displayToast.js';
 
 export function getBestFilms(category, elementId) {
-        let url = null;
-        
-        if (category) {
-            url = `http://localhost:8000/api/v1/titles/?genre=${category}&page_size=6&sort_by=-avg_vote`
-        } else {
-            url = 'http://localhost:8000/api/v1/titles/?page_size=6&sort_by=-avg_vote';
-        }
-        fetch(url) // change to your actual local URL and port
+    let url = null;
+
+    if (category) {
+        url = `http://localhost:8000/api/v1/titles/?genre=${category}&page_size=6&sort_by=-avg_vote`
+    } else {
+        url = 'http://localhost:8000/api/v1/titles/?page_size=6&sort_by=-avg_vote';
+    }
+    fetch(url) // change to your actual local URL and port
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -28,6 +28,11 @@ export function getBestFilms(category, elementId) {
 
                 img.src = item.image_url;
                 img.setAttribute('alt', item.title);
+
+                img.onerror = () => {
+                    img.src = 'static/img/img-not-found.jpg';
+                };
+
                 titleElement.textContent = item.title;
                 button.id = `film-${item.id}`;
             });
