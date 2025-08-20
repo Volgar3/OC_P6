@@ -10,7 +10,7 @@ Le site à pour but de regrouper les films ayant le plus gros score IMDB en int�
 
 1/ Mise en place du front-end
 
-    1. Cloner ce dépôt : ```bash $ git clone https://github.com/Volgar3/OC_P6.git
+    1. Cloner ce dépôt : ```bash $ git clone https://github.com/Volgar3/OC_P6.git```
 
     2. 
 
