@@ -8,11 +8,11 @@ Le site à pour but de regrouper les films ayant le plus gros score IMDB en int�
 
 ## Prérequis 
 
-#### 1/ Mise en place de l'API OCMOVIES
+### 1/ Mise en place de l'API OCMOVIES
 
 1. Cloner le dépôt : $ git clone https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.git
 
-2. Se positionner à la racine de l'API : $ cd ocmovies-api-fr 
+2. Se positionner à la racine de l'API : ``` $ cd ocmovies-api-fr ```
 
 3. Créer un environnement virtuel : 
 
@@ -32,7 +32,7 @@ Le site à pour but de regrouper les films ayant le plus gros score IMDB en int�
 
 Pour plus d'informations sur l'API OCMOVIES : https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 
-#### 2/ Mise en place du front-end
+### 2/ Mise en place du front-end
 
 1. Cloner ce dépôt :  ``` $ git clone https://github.com/Volgar3/OC_P6.git ```
 
