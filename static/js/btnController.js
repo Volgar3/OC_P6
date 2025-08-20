@@ -1,5 +1,5 @@
 
-// Fonction pour créer le bouton
+// Create button
 function createToggleButton({ section, films, insertAfterIndex, hideAfterIndex }) {
     const toggleBtn = document.createElement('button');
     toggleBtn.textContent = 'Voir plus...';
@@ -54,10 +54,10 @@ export function initBtnController({ sectionSelector, filmSelector }) {
         film.style.display = index > hideAfterIndex ? 'none' : '';
     });
 
-    // On init la fonction avec les paramètres
+    // Init with parameters
     createToggleButton({ section, films, insertAfterIndex, hideAfterIndex });
 }
-// Fonction pour (re)charger dynamiquement tous les boutons
+// dynamic reload buttons 
 const sections = ['#mysteryFilms', '#dramaFilms', '#bestFilms'];
 
 export function loadAllBtnControllers() {
@@ -69,10 +69,10 @@ export function loadAllBtnControllers() {
     });
 }
 
-// Appel au chargement initial
+// Call for the first init
 loadAllBtnControllers();
 
-// Ajout d’un listener resize pour réinitialiser selon la taille
+// Listener resizing
 window.addEventListener('resize', () => {
     loadAllBtnControllers();
 });

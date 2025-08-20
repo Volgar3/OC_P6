@@ -3,14 +3,17 @@ import { getCategoryFilms } from './getCategoryFilms.js';
 import { initBtnController } from './btnController.js';
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Init getBestFilms    
     getBestFilms(null, 'bestFilms');
     getBestFilms('mystery', 'mysteryFilms');
     getBestFilms('drama', 'dramaFilms');
 
+    // Init selected cateogry
     getCategoryFilms('categorySelector', 'categoryFilms');
     getCategoryFilms('secondCategorySelector', 'secondCategoryFilms');
 
-// Activation du bouton Voir plus / Voir moins
+    // Init btn-controllers
     initBtnController({ sectionSelector: '#mysteryFilms', filmSelector: '.film-container' });
     initBtnController({ sectionSelector: '#dramaFilms', filmSelector: '.film-container' });
     initBtnController({ sectionSelector: '#bestFilms', filmSelector: '.film-container' });
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     modalBoxOffice.innerHTML = `<strong>Recettes au box-office : </strong>${data.worldwide_gross_income ?? "Unknown"}`;
                     modalIMBD.innerHTML = `<strong>Score IMDB :</strong> ${data.avg_vote} /10`;
                     modalActors.innerHTML = `<u>Acteurs et actrices :</u>  ${data.actors}`;
-                    modalReleaseDate.innerHTML =`<u>Sortie en :</u>  ${releaseYear}`;
+                    modalReleaseDate.innerHTML = `<u>Sortie en :</u>  ${releaseYear}`;
                 }
             );
         });

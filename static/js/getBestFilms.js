@@ -15,7 +15,7 @@ export function getBestFilms(category, elementId) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // or response.text(), depending on what your server returns
+            return response.json();
         })
         .then(data => {
             const container = document.getElementById(elementId);
