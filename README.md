@@ -12,7 +12,7 @@ Le site à pour but de regrouper les films ayant le plus gros score IMDB en int�
 
 1. Cloner le dépôt : $ git clone https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.git
 
-2. Se positionner à la racine de l'API : ``` $ cd ocmovies-api-fr ```
+2. Se positionner à la racine de l'API : ``` $ cd OCMOVIES-API-EN-FR ```
 
 3. Créer un environnement virtuel : 
 
@@ -36,9 +36,11 @@ Pour plus d'informations sur l'API OCMOVIES : https://github.com/OpenClassrooms-
 
 1. Cloner ce dépôt :  ``` $ git clone https://github.com/Volgar3/OC_P6.git ```
 
-2. Installer l'extension LiveServer avec Visual Studio Code
+2. Se positionner à la racine du projet dans son IDE
 
-3. Une fois installé, une fois avoir cliqué sur le fichier "index.html" en bas à droite de l'IDE, cliquer sur "Go Live"
+3. Installer l'extension LiveServer avec Visual Studio Code
+
+4. Une fois installé, Clique droit sur le fichier 'index.html' et cliquer sur l'option "Go live" (Si vous n'avez pas l'option, cliquer sur "Go live" en bas à droite de votre IDE)
 
 
 Conception du front-end avec  les outils : JavaScript, HTML, CSS, Bootstrap
