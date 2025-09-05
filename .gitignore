@@ -164,4 +164,4 @@ cython_debug/
 # .gitignore
 .DS_Store
 static/img/.DS_Store
-static/img/
+static/img/mieux-noté

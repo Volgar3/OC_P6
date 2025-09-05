@@ -6,7 +6,7 @@ export function getCategoryFilms() {
     const secondCategorySelector = document.getElementById('secondCategorySelector');
 
     categorySelector.addEventListener('change', function () {
-        const selectedGenre = categorySelector.value; // var me permettant de savoir quel est le genre choisi
+        const selectedGenre = categorySelector.value;
         getBestFilms(selectedGenre, 'categoryFilms');
     });
 

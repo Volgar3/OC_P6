@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
     getCategoryFilms('categorySelector', 'categoryFilms');
     getCategoryFilms('secondCategorySelector', 'secondCategoryFilms');
 
+    const categorySelect = document.querySelector('#categorySelector');
+    const secondCategorySelect = document.querySelector('#secondCategorySelector');
+    if (categorySelect && secondCategorySelect) {
+        categorySelect.value = 'Action';
+        secondCategorySelect.value = 'Fantasy';
+        categorySelect.dispatchEvent(new Event('change'));
+        secondCategorySelect.dispatchEvent(new Event('change'));
+    }
+
     // Init btn-controllers
     initBtnController({ sectionSelector: '#mysteryFilms', filmSelector: '.film-container' });
     initBtnController({ sectionSelector: '#dramaFilms', filmSelector: '.film-container' });
