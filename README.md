@@ -22,7 +22,7 @@ Le site à pour but de regrouper les films ayant le plus gros score IMDB en int�
 4. Activer l'environnement virutel : 
 
     - Linux et Mac : ``` $ Source env/bin/activate ```
-    - Windows :   ``` $ env/Script/activate ```
+    - Windows :   ``` $ env/Scripts/activate ```
 
 5. Installer les dépendances de l'API : ``` $ pip install -r requirements.txt ```
 

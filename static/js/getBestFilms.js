@@ -19,8 +19,8 @@ export function getBestFilms(category, elementId) {
         })
         .then(data => {
             const container = document.getElementById(elementId);
-
             const films = container.querySelectorAll('.film-container');
+
             data.results.forEach((item, index) => {
                 const img = films[index].querySelector('img');
                 const titleElement = films[index].querySelector('.film-title');
@@ -31,6 +31,7 @@ export function getBestFilms(category, elementId) {
 
                 img.onerror = () => {
                     img.src = 'static/img/img-not-found.jpg';
+
                 };
 
                 titleElement.textContent = item.title;

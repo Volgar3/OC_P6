@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     modalTitle.textContent = data.title;
                     modalImage.src = data.image_url;
+                    modalImage.onerror = () => {
+                        modalImage.src = 'static/img/img-not-found.jpg';
+                    };
                     modalDescription.textContent = data.long_description;
                     modalGenre.innerHTML = `<strong>Genres :</strong> ${data.genres.join(", ")}`;
                     modalDuration.innerHTML = `<strong>Durée :</strong> ${data.duration} minutes`;
